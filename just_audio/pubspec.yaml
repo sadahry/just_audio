@@ -8,12 +8,22 @@ environment:
   flutter: ">=1.12.13+hotfix.5"
 
 dependencies:
-  just_audio_platform_interface: ^4.0.0
+  # just_audio_platform_interface: ^4.0.0
   # just_audio_platform_interface:
   #   path: ../just_audio_platform_interface
-  just_audio_web: ^0.4.2
+  just_audio_platform_interface: 
+    git: # https://github.com/ryanheise/just_audio/issues/97#issuecomment-1020736223
+      url: git@github.com:ryanheise/just_audio.git
+      ref: 735089f927d28230503b63c8fdd3887e5f62bee2
+      path: just_audio_platform_interface
+  # just_audio_web: ^0.4.2
   # just_audio_web:
   #   path: ../just_audio_web
+  just_audio_web:
+    git: # https://github.com/ryanheise/just_audio/issues/97#issuecomment-1020736223
+      url: git@github.com:sadahry/just_audio.git
+      ref: cf88f193bed9cc1a41573ca9be8eab25de211c9c
+      path: just_audio_web
   audio_session: ^0.1.6+1
   rxdart: '>=0.26.0 <0.28.0'
   path: ^1.8.0
